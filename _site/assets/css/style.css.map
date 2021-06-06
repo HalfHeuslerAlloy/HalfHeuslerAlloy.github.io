@@ -3,12 +3,12 @@
 	"file": "style.css",
 	"sources": [
 		"style.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/theme.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/ext/_fonts.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/ext/_normalize.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/_begin.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/_syntax.scss",
-		"C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/texture-0.5/_sass/ext/_solarized-light.scss"
+		"_sass/theme.scss",
+		"_sass/ext/_fonts.scss",
+		"_sass/ext/_normalize.scss",
+		"_sass/_begin.scss",
+		"_sass/_syntax.scss",
+		"_sass/ext/_solarized-light.scss"
 	],
 	"sourcesContent": [
 		"@import \"theme\";// Textures\n.texture-black {\n    background-image: url('/assets/textures/black.jpg');\n\n    h2 {\n        color: #999;\n    }\n}\n\n.texture-blue {\n    background-image: url('/assets/textures/blue.jpg');\n\n    h2 {\n        color: #ddd;\n    }\n\n    .social i:hover {\n        color: #eee;\n    }\n\n    .post-date {\n        color: #ccc;\n    }\n}\n\n.texture-red {\n    background-image: url('/assets/textures/red.jpg');\n}\n\n.texture-purple {\n    background-image: url('/assets/textures/purple.jpg');\n}\n\n.texture-green {\n    background-image: url('/assets/textures/green.jpg');\n\n    .post-date {\n        color: #ccc;\n    }\n}\n\n.texture-red,\n.texture-purple {\n    h2 {\n        color: #ccc;\n    }\n\n    .social i {\n        color: #ddd;\n\n        &:hover {\n            color: lighten(#ddd, 7%);\n        }\n    }\n\n    .post-date {\n        color: #ddd;\n    }\n}\n",
