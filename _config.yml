@@ -18,9 +18,10 @@ texture:
    - title: Home
      url: "/"
    - title: About
-     url: "/About"
+     url: "/about"
 
 # Build settings
 theme: texture
+remote_theme: samarsault/texture
 plugins:
   - jekyll-feed
