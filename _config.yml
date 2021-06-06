@@ -13,8 +13,14 @@ texture:
   showPicker: false
   
   showNav: true
+  
+  navigation:
+   - title: Home
+     url: "/"
+   - title: About
+     url: "/About"
 
 # Build settings
-theme: jekyll-theme-time-machine
+theme: texture
 plugins:
   - jekyll-feed
