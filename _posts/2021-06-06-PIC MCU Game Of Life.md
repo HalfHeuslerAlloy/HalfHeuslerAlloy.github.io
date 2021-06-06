@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "PIC MCU: Game of Life in 256 words"
+title:  "PIC MCU: Conway's Game of Life in 256 words"
 date:   2021-06-06
 ---
 
