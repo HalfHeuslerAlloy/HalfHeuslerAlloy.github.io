@@ -2,7 +2,7 @@
 layout: post
 title:  "Infinite Fractal Plane"
 description: An example post which shows code rendering.
-date:   2020-02-02
+date:   2021-06-06
 categories: OpenGL Fractal
 
 ---

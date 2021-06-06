@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Solid State Tesla Coil"
-date:   2020-06-06
+date:   2021-06-06
 categories: Electronics
 description: Angry electrons.
 ---
