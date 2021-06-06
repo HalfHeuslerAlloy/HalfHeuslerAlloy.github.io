@@ -15,6 +15,6 @@ texture:
   showNav: true
 
 # Build settings
-theme: texture
+theme: jekyll-theme-time-machine
 plugins:
   - jekyll-feed
