@@ -7,13 +7,13 @@ texture:
     #twitter: thelehhman
     github:  HalfHeuslerAlloy
     #linkedIn: in/thelehhman # format: locale/username
-  
+
   style: [purple]
-  
+
   showPicker: false
-  
+
   showNav: true
-  
+
   navigation:
    - title: Home
      url: "/"
@@ -23,5 +23,6 @@ texture:
 # Build settings
 theme: texture
 remote_theme: samarsault/texture
+show_excerpts: true
 plugins:
   - jekyll-feed
