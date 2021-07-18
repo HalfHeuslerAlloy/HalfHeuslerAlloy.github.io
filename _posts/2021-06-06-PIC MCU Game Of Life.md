@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Physically Smallest Implementation of Conway's Game of Life... Probably"
+title:  "PIC MCU: Conway's Game of Life in 256 words"
 date:   2021-06-06
 ---
 
