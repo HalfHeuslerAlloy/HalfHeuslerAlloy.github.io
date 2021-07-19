@@ -6,4 +6,4 @@ permalink: /about/
 
 
 
-This site is hosted by [GitHub pages](https://pages.github.com) !: 
+This site is hosted by [GitHub pages](https://pages.github.com) !

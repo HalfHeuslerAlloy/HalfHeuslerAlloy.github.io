@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/assets/css/style.css">
-<title>PIC MCU: Conway's Game of Life in 256 words</title></head>
+<title>Physically Smallest Implementation of Conway's Game of Life... Probably</title></head>
 <body>
   <header class="texture-purple">
     <div class="container"><div class="navbar">
@@ -17,7 +17,7 @@
 		
 	</ul>
 </div></div><div class="container">
-	<h1>PIC MCU: Conway's Game of Life in 256 words</h1>
+	<h1>Physically Smallest Implementation of Conway's Game of Life... Probably</h1>
 	<h4 class="post-description"></h4>
 	<div class="post-date" style="margin-top:20px">
 		Published on Jun 6, 2021
@@ -28,13 +28,9 @@
   <main>
     <div class="container">
       <div class="post-container">
-<<<<<<< Updated upstream
-          <p>Did you know you can get a microcontroller in a 6-pin SOT-23 format?Well,  PIC10F320’s are smaller than a grain of rice and not nearly as tasty. As to be expected you don’t get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an internal clock running at 16MHz and an instuction speed of 4MHz we are just fast enough to output Pal/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway’s game of life (GOL)!</p>
-=======
-          <p>Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well,  PIC10F320’s are smaller than a grain of rice and not nearly as tasty. As to be expected you don’t get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an internal clock running at 16MHz and an instruction speed of 4MHz we are just fast enough to output Pal/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway’s game of life (GOL)!</p>
->>>>>>> Stashed changes
+          <p>Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well, PIC10F320’s are smaller than a grain of rice and not nearly as tasty. As to be expected you don’t get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an internal clock running at 16MHz and an instruction speed of 4MHz we are just fast enough to output PAL/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway’s game of life (GOL)!</p>
 
-<p>Now we only get 256 words and we’ll need every last bit of it to fit everything in. Even worst, before now I’ve never programmed in assembly and while PICs can be programmed in embedded C like Arduino it is even more unlikely we can fit everything in. Plus I’d like to learn assembly anyway.</p>
+<p>Now we only get 256 words and we’ll need every last bit of it to fit everything in. Even worst, before now I’ve never programmed in assembly and while PICs can be programmed in embedded C like Arduino it is even more unlikely we can fit everything in. Actually this whole project started as a fun way to learn assembly in an interesting and functional enviroment, and without learing x86 or bricking my PC.</p>
 
 <p>#FYI, it is words and not bytes of program space since each instruction in PIC10 series is 12 bits so the actual program size is 384 bytes, but since each instruction is indivisible it is better expressed as a word for each instruction.</p>
 
@@ -42,11 +38,7 @@
 
 <p>The PICs don’t have such hardware so we need to both race the beam and do bit-bashing to generate the correct waveform. Now each instruction takes 0.25us to execute and the visible portion of each scan line is 52us long, which is a maximum horizontal resolution of 208 pixels. And that’s only if we use 1 instruction, in most cases, we need multiple instructions to read from some defined video memory and managing loops counters. Again only 256 words so we can’t waste them unrolling loops. Thankfully that won’t matter much as the limited PICs memory space caps our max grid space for our GOL to 16 by 16 cells.</p>
 
-<<<<<<< Updated upstream
-<p>Add a diagram of PAL video here for timing and voltage references. 0V is used for sync pulse timing and voltage between 0.33V-1V are shades of grey. So to get just black and white we need to set the video pin to either 0, 0.33V or 1V. While we could use two pins, we can do it with only 1 tristate IO pin. A tristate IO pin as three states high, low or high impedance when set as input. with a voltage divide and knowning that the resistance across the video in terminal of most TVs is 75Ohms we can setup a voltage divide to give us 0V, 0.33V and 1V (approximately) and assign them to the low , high impedance and High level respectively.</p>
-=======
 <p>Add a diagram of PAL video here for timing and voltage references. 0V is used for sync pulse timing and voltage between 0.33V-1V are shades of grey. So to get just black and white we need to set the video pin to either 0, 0.33V or 1V. While we could use two pins, we can do it with only 1 tristate IO pin. A tristate IO pin as three states high, low or high impedance when set as input. with a voltage divide and knowning that the resistance across the video in terminal of most TVs is 75 Ohms we can setup a voltage divide to give us 0V, 0.33V and 1V (approximately) and assign them to the low , high impedance and High level respectively.</p>
->>>>>>> Stashed changes
 
 <p>Harvested SMD resistors from old circuit boards. The whole circuit fit on the end of a video plug. This may also be the smallest physicsal implementation of GOL.</p>
 
