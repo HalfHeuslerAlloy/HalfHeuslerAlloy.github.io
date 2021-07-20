@@ -12,8 +12,15 @@ Now we only get 256 words and we'll need every last bit of it to fit everything 
 
 Aficionados of the Atari and other early home game consoles will be familiar with racing the beam. Old game consoles were played on CRTs which have an electron beam racing across the screen and to update the display you had to change video memory at the right time as the beam was moving across the screen. Now the Atari had dedicated hardware to read from a very limited video memory to draw to the screen which left the main processor free to update the video memory and other game logic while that hardware did all the analog output and sync pulse timings to get the video in the right format to work on a CRT.
 
+![PAL video timings](/assets/PAL video.svg)
+
+
 The PICs don't have such hardware so we need to both race the beam and do bit-bashing to generate the correct waveform. Now each instruction takes 0.25us to execute and the visible portion of each scan line is 52us long, which is a maximum horizontal resolution of 208 pixels. And that's only if we use 1 instruction, in most cases, we need multiple instructions to read from some defined video memory and managing loops counters. Again only 256 words so we can't waste them unrolling loops. Thankfully that won't matter much as the limited PICs memory space caps our max grid space for our GOL to 16 by 16 cells.
 
-Add a diagram of PAL video here for timing and voltage references. 0V is used for sync pulse timing and voltage between 0.33V-1V are shades of grey. So to get just black and white we need to set the video pin to either 0, 0.33V or 1V. While we could use two pins, we can do it with only 1 tristate IO pin. A tristate IO pin as three states high, low or high impedance when set as input. with a voltage divide and knowning that the resistance across the video in terminal of most TVs is 75 Ohms we can setup a voltage divide to give us 0V, 0.33V and 1V (approximately) and assign them to the low , high impedance and High level respectively.
+![Circuit diagram](/assets/GOL PIC10F320.svg)
 
-Harvested SMD resistors from old circuit boards. The whole circuit fit on the end of a video plug. This may also be the smallest physicsal implementation of GOL.
+0V is used for sync pulse timing and voltage between 0.33V-1V are shades of grey. So to get just black and white we need to set the video pin to either 0, 0.33V or 1V. While we could use two pins, we can do it with only 1 tristate IO pin. A tristate IO pin as three states high, low or high impedance when set as input. with a voltage divide and knowning that the resistance across the video in terminal of most TVs is 75 Ohms we can setup a voltage divide to give us 0V, 0.33V and 1V (approximately) and assign them to the low , high impedance and High level respectively.
+
+![Inside the unit](/assets/PIC_MCU_GOL_Inside.jpg)
+
+Harvested SMD resistors from old circuit boards, get a better image and annotation on this. The whole circuit fit on the end of a video plug. This may also be the smallest physicsal implementation of GOL.
