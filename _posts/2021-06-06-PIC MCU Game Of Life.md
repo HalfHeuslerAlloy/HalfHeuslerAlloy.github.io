@@ -1,10 +1,10 @@
 ---
 layout: post
-title:  "Physically Smallest Implementation of Conway's Game of Life... Probably"
+title:  "Smallest Physical Implementation of Conway's Game of Life... Probably"
 date:   2021-06-06
 ---
 
-Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well, PIC10F320's are smaller than a grain of rice and not nearly as tasty. As to be expected you don't get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an internal clock running at 16MHz and an instruction speed of 4MHz we are just fast enough to output PAL/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway's game of life (GOL)!
+Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well several MCU manufactures make them including Microchip PIC series, these PIC10F320 are smaller than a grain of rice and not nearly as tasty. As to be expected you don't get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an instruction speed of 4MHz we are just fast enough to output PAL/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway's game of life (GOL) in the smallest physical space!
 
 Now we only get 256 words and we'll need every last bit of it to fit everything in. Even worst, before now I've never programmed in assembly and while PICs can be programmed in embedded C like Arduino it is even more unlikely we can fit everything in. Actually this whole project started as a fun way to learn assembly in an interesting and functional enviroment, and without learing x86 or bricking my PC.
 
@@ -17,3 +17,5 @@ The PICs don't have such hardware so we need to both race the beam and do bit-ba
 Add a diagram of PAL video here for timing and voltage references. 0V is used for sync pulse timing and voltage between 0.33V-1V are shades of grey. So to get just black and white we need to set the video pin to either 0, 0.33V or 1V. While we could use two pins, we can do it with only 1 tristate IO pin. A tristate IO pin as three states high, low or high impedance when set as input. with a voltage divide and knowning that the resistance across the video in terminal of most TVs is 75 Ohms we can setup a voltage divide to give us 0V, 0.33V and 1V (approximately) and assign them to the low , high impedance and High level respectively.
 
 Harvested SMD resistors from old circuit boards. The whole circuit fit on the end of a video plug. This may also be the smallest physicsal implementation of GOL.
+
+Now is this really the smallest self contained GOL ever build (Not including a display)? But send me an email if you find or make a smaller one.
