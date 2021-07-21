@@ -5,7 +5,7 @@ date:   2021-06-06
 categories: Electronics
 ---
 
-Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well several MCU manufactures make them including Microchip PIC series, these PIC10F320 are smaller than a grain of rice and not nearly as tasty. As to be expected you don't get much in them with only 256 words of program space and 64 bytes of register space of which only half is usable as general memory storage. But with an instruction speed of 4MHz we are just fast enough to output PAL/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway's game of life (GOL) in the smallest physical space!
+Did you know you can get a microcontroller in a 6-pin SOT-23 format? Well several MCU manufactures make them including Microchip's PIC series, of these PIC10F320 are smaller than a grain of rice and not nearly as tasty. As to be expected you don't get much in them with only 256 words of program space and 64 bytes of general memory storage. But with an instruction speed of 4MHz we are just fast enough to output PAL/NTSC video by bit bashing a tristate IO pin connected to a couple of resistors. So lets try to implement Conway's game of life (GOL) in the smallest physical space!
 
 Now we only get 256 words and we'll need every last bit of it to fit everything in. Even worst, before now I've never programmed in assembly and while PICs can be programmed in embedded C like Arduino it is even more unlikely we can fit everything in. Actually this whole project started as a fun way to learn assembly in an interesting and functional environment, and without learning x86 or bricking my PC.
 
@@ -25,4 +25,4 @@ Harvested SMD resistors from old circuit boards. The whole circuit fit on the en
 
 ![Inside the unit](/assets/PIC_MCU_GOL_Inside.jpg)
 
-Now is this really the smallest self contained GOL ever build (Not including a display)? But send me an email if you find or make a smaller one.
+I got this small enough to fit on the end of the pluf itself by forgoing the need of a circuit board and directly soldering the resistors and connections to the PIC. Thus possibly making this the smallest physical implementation of GOL (not including the screen). If you know of or have made a smaller one I'd love to see it.
