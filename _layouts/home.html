@@ -7,7 +7,9 @@ layout: page
 	<li>
 		{%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
 		<div class="post-meta">
-            <a href="{{ post.url }}" ><img src="{{ post.thumbnail }}" />
+            {%- if post.thumbnail != nil -%}
+            <a href="{{ post.url }}" ><img src="{{ post.thumbnail }}" style="width:256px;height:256px;border: 10px solid white;"/>
+            {%- endif -%}
 			<a class="post-link" href="{{ post.url | relative_url }}">
 				<h2 class="post-title">{{ post.title | escape }}</h2>
 			</a>
