@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Smallest Physical Implementation of Conway's Game of Life... Probably"
-date:   2021-06-06
+date:   2021-07-30
 categories: Electronics
 ---
 
