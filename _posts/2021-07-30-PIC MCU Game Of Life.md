@@ -2,6 +2,7 @@
 layout: post
 title:  "Smallest Physical Implementation of Conway's Game of Life... Probably"
 date:   2021-07-30
+thumbnail: "assets/PIC_GOL/PAL video.svg"
 categories: Electronics
 ---
 
