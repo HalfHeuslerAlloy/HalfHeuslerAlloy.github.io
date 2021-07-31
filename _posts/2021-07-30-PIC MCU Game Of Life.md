@@ -34,6 +34,6 @@ Harvested SMD resistors from old circuit boards. The whole circuit fit on the en
 
 In the end I got this small enough to fit on the end of the plug itself by forgoing the need of a circuit board and directly soldering the SMD resistors and connections to the PIC. A small 3D printer part holds the 3V lithium battery in place. The size of this possibly makes this the smallest physical implementation of GOL (not including the screen). If you know of or have made a smaller one I'd love to see it. Clearly even tiny SOT-23 microcontrollers can do a lot, and in part this project was inspired by [this](https://youtu.be/PZsWqOuJFKI) video of a much more impressive tiny video console running on an attiny10.
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/dDvYMWH5eS4" frameborder="0" allowfullscreen></iframe>
+<iframe width="600vw" height="400vh" src="https://www.youtube.com/embed/dDvYMWH5eS4" frameborder="0" allowfullscreen></iframe>
 
 Well here's it running! The image isn't quite centered on the display and the internal clock's instability is likely causing jitter but it does work. Every 32 seconds or so the watchdog timer resets the program and refills the array with random noise. Some of this could be improved either with an external clock and optimizing the code to leave more programming space for extra features. I'll link the assembly code [here](/assets/PIC_GOL/GameOfLife-16wide.7z) if you want to make it yourself or improve on my horrible code!
