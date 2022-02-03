@@ -21,7 +21,7 @@ texture:
      url: "/about"
 
 # Build settings
-theme: texture
+#theme: texture
 remote_theme: samarsault/texture
 show_excerpts: true
 plugins:
