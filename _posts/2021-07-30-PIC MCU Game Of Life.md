@@ -36,4 +36,7 @@ In the end I got this small enough to fit on the end of the plug itself by forgo
 
 <iframe width="600vw" height="400vh" src="https://www.youtube.com/embed/dDvYMWH5eS4" frameborder="0" allowfullscreen></iframe>
 
-Well here's it running! The image isn't quite centered on the display and the internal clock's instability is likely causing jitter but it does work. Every 32 seconds or so the watchdog timer resets the program and refills the array with random noise. Some of this could be improved either with an external clock and optimizing the code to leave more programming space for extra features. I'll link the assembly code [here](/assets/PIC_GOL/GameOfLife-16wide.7z) if you want to make it yourself or improve on my horrible code!
+Well here's it running! The image isn't quite centered on the display and the internal clock's instability is likely causing jitter but it does work. Every 32 seconds or so the watchdog timer resets the program and refills the array with random noise. Some of this could be improved either with an external clock and optimizing the code to leave more programming space for extra features. I'll link the assembly code below if you want to make it yourself or improve on my horrible code!
+
+
+[Source Code](/assets/PIC_GOL/GameOfLife-16wide.7z)
