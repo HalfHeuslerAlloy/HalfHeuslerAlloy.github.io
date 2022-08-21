@@ -1,3 +1,4 @@
+
 texture:
   title: Dr Matthew Vaughan
   tagline: Physicist. Electronic Hobbyist
@@ -20,8 +21,10 @@ texture:
    - title: About
      url: "/about"
 
+
+
 # Build settings
-#theme: texture
+theme: texture
 remote_theme: samarsault/texture
 show_excerpts: true
 plugins:
