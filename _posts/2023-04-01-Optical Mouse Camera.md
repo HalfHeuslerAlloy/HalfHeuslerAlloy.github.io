@@ -1,8 +1,9 @@
 ---
 layout: post
 title:  "ADNS-2610 Optical Mouse 'Camera'"
-date:   2023-03-26
-categories: Electronics, Optical
+date:   2023-04-01
+thumbnail: "assets/ADNS-2610/thumbnail.png"
+categories: Electronics Optical
 ---
 
 What camera do you give to someone who already has too many? A camera that should exist! An optical mouse is essentially a high frame rate, a low-resolution camera designed to track features on the surface of a desk/mouse pad. A quick raid of my parent's home turned up an old dirty optical mouse. Inside was a ADNS-2610 mouse sensor featuring a tiny 18*18 pixel array. 
