@@ -10,7 +10,7 @@ What camera do you give to someone who already has too many? A camera that shoul
 
 I extracted the PCB from the mouse and trimmed the board down to remove (and salvage) unnecessary components. The ADNS-2610 can't communicate directly with the PC and instead uses a separate USB interface IC that also handles button and scroll wheel inputs. If The USB interface IC was left in the circuit it may interfere with our attempts to communicate with the sensor so it was disabled by cutting the power, ground and data pins.
 
-![Mouse PCB](/assets/ADNS-2610/Cut_Mouse_Board.jpeg)
+![Mouse PCB](/assets/ADNS-2610/Cut_Mouse_Board.jpg)
 
 A Raspberry pi pico was used to interface with the ADNS-2610. For communication the sensor uses a two wire serial port, with the pico having full control over the clock speed. A little bit of micropython writes and reads to the sensor. Unfortunately, while the sensor normally runs at 1500fps for its internal feature tracking and normal computer mouse use, but it can only return 1 pixel at a time. Plus extra time is needed to send data over serial, so the frame rate is limited to about 2-3fps.
 
